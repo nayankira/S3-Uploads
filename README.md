@@ -153,25 +153,28 @@ Amazon S3 with a local stream wrapper and actually store the uploads in your WP 
 
 New: Multisite Configuration
 =======
-For separating the endpoints of each site in the multisite network, you need to modify /inc/class-s3-uploads.php:
+For separating the endpoints of each site in the multisite network, you need to modify your wp-config.php:
 ```php
-	public static function get_instance() {
 
-		//load your mutlisites' information
-		$sites =  array(
-	array("id"=>"YOUR SITE BLOG ID (e.g. 1)", //"id" is the blog id of each website 
-		"key"=>"YOUR ACCESS KEY ID", //"key" is the user's Access Key Id
-		"bucket"=>"YOUR BUCKET NAME FOR THIS SITE", //"bucket" is S3 bucket name
-		"secret"=>"YOUR SECRET ACCESS KEY", //"secret" is the user's Secret Access Key
-		"region"=>"THE REGION OF THIS BUCKET"), //"region" is the corresponding bucket region 
-	array("id"=>"YOUR SITE BLOG ID (e.g. 2)",
-		"key"=>"YOUR ACCESS KEY ID",
-		"bucket"=>"YOUR BUCKET NAME FOR THIS SITE",
-		"secret"=>"YOUR SECRET ACCESS KEY",
-		"region"=>"THE REGION OF THIS BUCKET")
-	);
+//default end point
+define('S3_UPLOADS_BUCKET','YOUR BUCKET NAME');
+define('S3_UPLOADS_KEY','YOUR KEY');
+define('S3_UPLOADS_SECRET','YOUR SECRET KEY');
+define('S3_UPLOADS_REGION','THE REGION OF THE BUCKET');
 
-	}
+// the end point 1 configuration
+define('S3_UPLOADS_BUCKET_M1','YOUR BUCKET NAME');
+define('S3_UPLOADS_KEY_M1','YOUR KEY');
+define('S3_UPLOADS_SECRET_M1','YOUR SECRET KEY');
+define('S3_UPLOADS_REGION_M1','THE REGION OF THE BUCKET');
+define('S3_UPLOADS_ID_M1','THE BOLB ID (e.g. 1)');//blog id of the subsite in the multisite network
+
+// the end point 2 configuration
+define('S3_UPLOADS_BUCKET_M2','YOUR BUCKET NAME');
+define('S3_UPLOADS_KEY_M2','YOUR KEY');
+define('S3_UPLOADS_SECRET_M2','YOUR SECRET KEY');
+define('S3_UPLOADS_REGION_M2','THE REGION OF THE BUCKET');
+define('S3_UPLOADS_ID_M2','THE BOLB ID (e.g. 2)');//blog id of the subsite
 ```
 
 Credits

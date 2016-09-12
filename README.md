@@ -167,14 +167,14 @@ define('S3_UPLOADS_BUCKET_M1','YOUR BUCKET NAME');
 define('S3_UPLOADS_KEY_M1','YOUR KEY');
 define('S3_UPLOADS_SECRET_M1','YOUR SECRET KEY');
 define('S3_UPLOADS_REGION_M1','THE REGION OF THE BUCKET');
-define('S3_UPLOADS_ID_M1','THE BOLB ID (e.g. 1)');//blog id of the subsite in the multisite network
+define('S3_UPLOADS_ID_M1','THE BOLG ID (e.g. 1)');//blog id of the subsite in the multisite network
 
 // the end point 2 configuration
 define('S3_UPLOADS_BUCKET_M2','YOUR BUCKET NAME');
 define('S3_UPLOADS_KEY_M2','YOUR KEY');
 define('S3_UPLOADS_SECRET_M2','YOUR SECRET KEY');
 define('S3_UPLOADS_REGION_M2','THE REGION OF THE BUCKET');
-define('S3_UPLOADS_ID_M2','THE BOLB ID (e.g. 2)');//blog id of the subsite
+define('S3_UPLOADS_ID_M2','THE BOLG ID (e.g. 2)');//blog id of the subsite
 ```
 
 Credits
